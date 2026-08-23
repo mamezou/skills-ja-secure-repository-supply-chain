@@ -1,44 +1,47 @@
-# Secure your repository's supply chain
+# Secure your repository's supply chain（日本語版）
 
-_Secure your supply chain, understand dependencies in your environment, know about vulnerabilities in those dependencies and patch them._
+_サプライチェーンを保護し、環境内の依存関係を把握し、依存関係の脆弱性を知って、パッチを当てる。_
 
-## Welcome
+> このリポジトリは GitHub Skills「[Secure your Repository Supply Chain](https://github.com/skills/secure-repository-supply-chain)」（MIT License）の日本語版です。
+> 演習の進め方と自動チェックの仕組みは原本と同じで、Issue に投稿される手順の本文だけを日本語にしています。
 
-GitHub helps you secure your supply chain, from understanding the dependencies in your environment, to knowing about vulnerabilities in those dependencies and patching them.
+## ようこそ
 
-- **Who this is for**: Developers, DevOps Engineers, Site Reliability Engineers, Security experts
-- **What you'll learn**: How to view repository dependencies, view Dependabot alerts, and enable Dependabot security and version updates
-- **What you'll build**: Repository dependencies, Dependabot alerts, pull requests to fix dependencies and version updates
-- **Prerequisites**: None
-- **Timing**: This exercise can be completed in under an hour
+GitHub は、環境内の依存関係を把握することから、依存関係の脆弱性を知り、パッチを当てるところまで、サプライチェーンの保護を支援します。
 
-In this exercise, you will explore:
+- **対象**: 開発者、DevOps エンジニア、SRE、セキュリティ担当者
+- **学ぶこと**: リポジトリの依存関係の見方、Dependabot alerts の見方、Dependabot security updates と version updates の有効化
+- **作るもの**: リポジトリの依存関係、Dependabot alerts、依存関係を修正する pull request、バージョン更新
+- **前提**: なし
+- **所要時間**: 1 時間以内
+
+この演習で扱うもの:
 
 1. Dependency graph
 2. Dependency alerts
 3. Dependency security updates
 4. Dependency versions updates
 
-### How to start this exercise
+### 演習の始め方
 
-Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
+演習を自分のアカウントにコピーし、Octocat（Mona）が最初のレッスンを準備するまで **20 秒ほど**待ってから、**ページを再読み込み**してください。
 
-[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=secure-repository-supply-chain&owner=%40me&name=skills-secure-repository-supply-chain&description=Exercise:+Secure+your+Repository+Supply+Chain&visibility=public)
+[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=mamezou&template_name=skills-ja-secure-repository-supply-chain&owner=%40me&name=skills-secure-repository-supply-chain&description=Exercise:+Secure+your+Repository+Supply+Chain&visibility=public)
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>うまくいかないとき 🤷</summary><br/>
 
-When copying the exercise, we recommend the following settings:
+演習をコピーするときは、次の設定を推奨します。
 
-- For owner, choose your personal account or an organization to host the repository.
+- Owner は自分の個人アカウント（または演習を置く Organization）を選ぶ。
 
-- We recommend creating a public repository, since private repositories will use Actions minutes.
+- private リポジトリは Actions の実行時間を消費するため、public リポジトリを推奨します。
 
-If the exercise isn't ready in 20 seconds, please check the [Actions](../../actions) tab.
+20 秒待っても演習が始まらないときは、[Actions](../../actions) タブを確認してください。
 
-- Check to see if a job is running. Sometimes it simply takes a bit longer.
+- ジョブが実行中かどうかを見る。少し長くかかることがあります。
 
-- If the page shows a failed job, please submit an issue. Nice, you found a bug! 🐛
+- ジョブが失敗している場合は、講師に知らせてください。
 
 </details>
 

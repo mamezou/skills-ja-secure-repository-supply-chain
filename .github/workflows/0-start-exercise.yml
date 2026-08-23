@@ -21,7 +21,7 @@ jobs:
     uses: skills/exercise-toolkit/.github/workflows/start-exercise.yml@v0.8.1
     with:
       exercise-title: "Secure your Repository's Supply Chain"
-      intro-message: "Let's explore how to secure your repository's supply chain, understand dependencies in your environment, and find vulnerabilities in those dependencies and patch them. 💻✨"
+      intro-message: "リポジトリのサプライチェーンを保護する方法を見ていきます。環境内の依存関係を把握し、依存関係の脆弱性を見つけて、パッチを当てます。 💻✨"
 
   post_next_step_content:
     name: Post next step content

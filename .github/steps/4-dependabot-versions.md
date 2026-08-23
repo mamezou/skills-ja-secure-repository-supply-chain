@@ -1,26 +1,26 @@
-## Step 4: Enable and trigger Dependabot version updates
+## Step 4: Dependabot version updates を有効にして動かす
 
-_Nicely done!_ :partying_face:
+_お見事です！_ :partying_face:
 
-You now have automated the process for Dependabot to alert you to vulnerabilities with your dependencies and to create pull requests to update them to secure versions! At this point, you only need to review the pull request and then merge it to stay on top of security problems with Dependencies.
+依存関係の脆弱性を Dependabot が知らせ、安全なバージョンに更新する pull request を作るところまで自動化できました。あとは pull request を確認してマージするだけで、依存関係のセキュリティ問題に遅れず対応できます。
 
 > [!NOTE]  
-> Did you notice that there were several pull requests suggested by Dependabot? You only merged the one related to the **axios** dependency, but the others disappeared from the **Pull requests** panel. That's because the upgrade of the axios dependency triggered changes of other transitive dependencies, that might be either removed or updated to other versions. Whenever there is a change in your dependency graph, Dependabot will automatically review the existing pull requests and close the ones that are no longer relevant. So don't merge everything at once, let Dependabot do the job for you! 
-<img width="955" alt="Screenshot showing that the axios PR was merged and that the 2 others were closed" src="../images/axios-pr-merged-others-closed.png" />
+> Dependabot が提案した pull request が複数あったことに気づきましたか。マージしたのは **axios** 依存関係のものだけですが、他のものは **Pull requests** の一覧から消えています。axios 依存関係のアップグレードによって他の推移的依存関係にも変更が生じ、削除されたり別のバージョンに更新されたりしたためです。dependency graph に変化があるたびに、Dependabot は既存の pull request を自動で見直し、不要になったものを閉じます。まとめて全部マージせず、Dependabot に任せましょう。 
+<img width="955" alt="axios の PR がマージされ、他の 2 件が閉じられたことを示すスクリーンショット" src="../images/axios-pr-merged-others-closed.png" />
 
 
-The security updates feature helps automate the process to resolve alerts, but what about just keeping up-to-date with version updates? We can also automate pull request generation for updated versions of dependencies using the Dependabot version updates feature.
+security updates はアラートの解決を自動化してくれますが、単にバージョンを最新に保ちたい場合はどうでしょうか。Dependabot version updates を使えば、依存関係の新しいバージョンに対する pull request の生成も自動化できます。
 
-**What are Dependabot version updates?**: In addition to security alerts, Dependabot can also take the effort out of maintaining your dependencies. You can use it to ensure that your repository automatically keeps up with the latest releases of the packages and applications it depends on. Similar to security alerts, Dependabot will identify an outdated dependency and create a pull request to update the manifest to the latest version of the dependency.
+**Dependabot version updates とは**: セキュリティアラートに加えて、Dependabot は依存関係の維持にかかる手間も減らせます。依存しているパッケージやアプリケーションの最新リリースに、リポジトリが自動で追随するようにできます。セキュリティアラートと同じように、Dependabot が古くなった依存関係を見つけ、マニフェストを最新バージョンに更新する pull request を作成します。
 
-Let's see how this works!
+どう動くか見てみましょう。
 
-### :keyboard: Activity 4.1: Enable and trigger Dependabot version updates
+### :keyboard: やること 4.1: Dependabot version updates を有効にして動かす
 
-1. Navigate to the **Settings** tab and select **Advanced Security**.
-1. Locate **Dependabot version updates** and click **Configure** to open a new file editor with pre-populated contents. The file is called `dependabot.yml`.
-1. Notice that the file is prepopulated to update the GitHub actions in the repository, the `github-actions` package ecosystem.
-1. Edit your `dependabot.yml` configuration file to include another entry. It should look like:
+1. **Settings** タブを開き、**Advanced Security** を選びます。
+1. **Dependabot version updates** を探して **Configure** をクリックすると、内容があらかじめ入ったファイルエディターが開きます。ファイル名は `dependabot.yml` です。
+1. `dependabot.yml` には、リポジトリ内の GitHub Actions（`github-actions` パッケージエコシステム）を更新する設定があらかじめ入っています。
+1. `dependabot.yml` 設定ファイルを編集して、もう 1 つエントリを追加します。次のようになります。
 
    ```yaml
    version: 2
@@ -35,12 +35,13 @@ Let's see how this works!
          interval: "weekly"
    ```
   
-   > 💡 **Tip:** While, you can edit and commit a file directly on github.com, you can also press the period key `.` to open a lightweight VS Code editor directly in browser.
+   > 💡 **ヒント:** ファイルは github.com 上で直接編集してコミットできますが、ピリオドキー `.` を押して、ブラウザー内で軽量な VS Code エディターを開くこともできます。
 
-1. Commit your changes directly to the `main` branch.
-1. With the configuration file updated, Mona should already be busy checking your work. Give her a moment and keep watch in the comments. You will see her respond with progress info and the next lesson.
+1. 変更を `main` ブランチに直接コミットします。
+1. 設定ファイルを更新したので、Mona が作業を確認しています。少し待って、コメントを見てください。進捗と次の Step が投稿されます。
 
-You have now configured Dependabot version updates to run and check for updates as follows:
+Dependabot version updates が次のように更新を確認するよう設定できました。
 
-- Check once a month for updates to GitHub Actions and create pull requests to update any that are out of date.
-- Check once a week for updates to .NET packages and create pull requests to update any that are out of date. By default, this check runs on a Monday, to run the check on a different day, see [schedule.day](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#scheduleday).
+- GitHub Actions の更新を月に 1 回確認し、古いものがあれば更新する pull request を作成する。
+- .NET パッケージの更新を週に 1 回確認し、古いものがあれば更新する pull request を作成する。既定では月曜日に実行されます。別の曜日に実行するには [schedule.day](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#scheduleday) を参照してください。
+

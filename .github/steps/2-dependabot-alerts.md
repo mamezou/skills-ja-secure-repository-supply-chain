@@ -1,47 +1,47 @@
-## Step 2: Enable and view Dependabot alerts
+## Step 2: Dependabot alerts を有効にして確認する
 
-_Nice work! :tada: You added and viewed a dependency using Dependency graph!_
+_よくできました！ :tada: Dependency graph を使って依存関係を追加し、確認できました。_
 
-Given how many dependencies our repository uses, maintaining them needs to become an automated task. Keeping our code secure is a top priority, so the first thing we need to do is set up a way to be notified when a dependency we are using is vulnerable or malware. We can do this by enabling Dependabot alerts.
+リポジトリが使う依存関係の数を考えると、管理は自動化する必要があります。コードを安全に保つことは最優先なので、まずやるべきは、使っている依存関係が脆弱だったりマルウェアだったりしたときに通知を受け取る仕組みを作ることです。Dependabot alerts を有効にすれば実現できます。
 
-**What are Dependabot alerts?**
+**Dependabot alerts とは**
 
-Dependabot alerts tell you that your code depends on a package that is insecure. These Dependabot alerts reference the [GitHub Advisory Database](https://github.com/advisories), which contains a list of known security vulnerabilities and malware, grouped in two categories: **GitHub reviewed advisories** and **unreviewed advisories**.
+Dependabot alerts は、コードが安全でないパッケージに依存していることを知らせます。Dependabot alerts は [GitHub Advisory Database](https://github.com/advisories) を参照しています。データベースには既知のセキュリティ脆弱性とマルウェアの一覧が、**GitHub reviewed advisories** と **unreviewed advisories** の 2 種類に分けて収録されています。
 
-If your code depends on a package that has a security vulnerability, this can cause a range of problems for your project or the people who use it. You should upgrade to a secure version of the package as soon as possible. If your code uses malware, you need to replace the package with a secure alternative.
+セキュリティ脆弱性のあるパッケージにコードが依存していると、プロジェクトや利用者にさまざまな問題を引き起こす可能性があります。できるだけ早く安全なバージョンにアップグレードしてください。コードがマルウェアを使っている場合は、安全な代替パッケージに置き換える必要があります。
 
-Let's try this out with our newly added `follow-redirects` dependency!
+いま追加した `follow-redirects` 依存関係で試してみましょう。
 
-### :keyboard: Activity 2.1: View security advisories in the GitHub Advisory Database
+### :keyboard: やること 2.1: GitHub Advisory Database でセキュリティアドバイザリを見る
 
-1. Navigate to [GitHub Advisory Database](https://github.com/advisories).
-1. Type or paste `follow-redirects` into the advisory search box.
-1. Click on any of the advisories that were found to see more information.
-1. You'll see the packages, impact, patches, workaround, and references for the advisory.
+1. [GitHub Advisory Database](https://github.com/advisories) を開きます。
+1. アドバイザリの検索ボックスに `follow-redirects` と入力または貼り付けます。
+1. 見つかったアドバイザリのどれかをクリックして、詳しい情報を見ます。
+1. アドバイザリの packages、impact、patches、workaround、references が表示されます。
 
-Notice the long list of advisories for our dependency! This can look scary but it's actually a good thing. It means that our dependency is actively being maintained and patches are being pushed to remove the vulnerability. If we had Dependabot alerts enabled, we could receive alerts when we need to update a dependency and act promptly to secure them.
+`follow-redirects` にアドバイザリが長く並んでいることに気づいたでしょうか。怖く見えますが、実はよいことです。活発にメンテナンスされ、脆弱性を取り除くパッチが公開されているということだからです。Dependabot alerts を有効にしておけば、依存関係を更新すべきときにアラートを受け取り、すぐに対応できます。
 
-Let's enable Dependabot alerts on our repository!
+では、リポジトリで Dependabot alerts を有効にしましょう。
 
-### :keyboard: Activity 2.2: Enable Dependabot alerts
+### :keyboard: やること 2.2: Dependabot alerts を有効にする
 
-1. Navigate to the **Settings** tab.
-1. Display the settings for **Advanced Security**.
-1. **Enable** Dependabot alerts.
-1. **Wait about 60 seconds for Dependabot to check for alerts.**
-1. Navigate to the **Security** tab.
-1. Under "Vulnerability alerts" in the side bar, select **Dependabot** to view a list of the Dependabot alerts for the default branch.
+1. **Settings** タブを開きます。
+1. **Advanced Security** の設定を表示します。
+1. Dependabot alerts を **Enable** にします。
+1. **Dependabot がアラートを確認するまで 60 秒ほど待ちます。**
+1. **Security** タブを開きます。
+1. サイドバーの「Vulnerability alerts」の下で **Dependabot** を選び、既定ブランチの Dependabot alerts の一覧を表示します。
 
-Dependabot has alerted us to vulnerabilities in the dependencies that we use. We can also use Dependabot to help us address these vulnerabilities by creating pull requests to update the dependency to a safe version.
+Dependabot が、使っている依存関係の脆弱性を知らせてくれました。さらに Dependabot には、依存関係を安全なバージョンに更新する pull request を作らせて、脆弱性への対処を助けてもらうこともできます。
 
-Let's see how this would work by using Dependabot to create a pull request for one of the alerts!
+アラートの 1 つについて、Dependabot に pull request を作らせて動きを見てみましょう。
 
-### :keyboard: Activity 2.3: Create a pull request based on a Dependabot alert
+### :keyboard: やること 2.3: Dependabot alert から pull request を作る
 
-1. In the list of Dependabot alerts, click the "Prototype Pollution in minimist" to display more information.
-1. Click the **Create Dependabot security update** button to create a pull request to update the dependency. This could take up to 2 minutes.
-1. When the pull request is open, the alert page is updated to show a **Review security update** button.
-1. Click the **Review security update** button to display the pull request.
-   - You can view the pull request and **Files changed** tab to review the update.
-1. Navigate back to the **Conversation** tab and merge the pull request.
-1. With the pull request merged, Mona should already be busy checking your work. Give her a moment and keep watch in the comments. You will see her respond with progress info and the next lesson.
+1. Dependabot alerts の一覧で「Prototype Pollution in minimist」をクリックし、詳しい情報を表示します。
+1. **Create Dependabot security update** ボタンをクリックして、依存関係を更新する pull request を作ります。作成には最大 2 分ほどかかることがあります。
+1. pull request が作られると、アラートのページに **Review security update** ボタンが表示されます。
+1. **Review security update** ボタンをクリックして pull request を表示します。
+   - pull request と **Files changed** タブで更新内容を確認できます。
+1. **Conversation** タブに戻り、pull request をマージします。
+1. pull request をマージしたので、Mona が作業を確認しています。少し待って、コメントを見てください。進捗と次の Step が投稿されます。
