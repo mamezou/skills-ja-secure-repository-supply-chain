@@ -17,7 +17,7 @@ security updates はアラートの解決を自動化してくれますが、単
 
 ### :keyboard: やること 4.1: Dependabot version updates を有効にして動かす
 
-1. **Settings** タブを開き、**Advanced Security** を選びます。
+1. **Settings** タブを開き、**Advanced Security**（アカウントによっては **Code security**）を選びます。
 1. **Dependabot version updates** を探して **Configure** をクリックすると、内容があらかじめ入ったファイルエディターが開きます。ファイル名は `dependabot.yml` です。
 1. `dependabot.yml` には、リポジトリ内の GitHub Actions（`github-actions` パッケージエコシステム）を更新する設定があらかじめ入っています。
 1. `dependabot.yml` 設定ファイルを編集して、もう 1 つエントリを追加します。次のようになります。
@@ -44,4 +44,3 @@ Dependabot version updates が次のように更新を確認するよう設定�
 
 - GitHub Actions の更新を月に 1 回確認し、古いものがあれば更新する pull request を作成する。
 - .NET パッケージの更新を週に 1 回確認し、古いものがあれば更新する pull request を作成する。既定では月曜日に実行されます。別の曜日に実行するには [schedule.day](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#scheduleday) を参照してください。
-
