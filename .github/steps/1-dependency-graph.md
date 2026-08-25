@@ -24,7 +24,7 @@ GitHub には、環境内の依存関係を把握し、脆弱性を知り、パ�
 > dependency graph は、新しいパブリックリポジトリでは既定で有効です。
 
 1. **Settings** タブを開きます。
-1. **Advanced Security** をクリックします。
+1. **Advanced Security**（アカウントによっては **Code security**）をクリックします。
 1. **Dependency Graph** が **Enabled** になっていることを確認します。
 
 ### :keyboard: やること 1.2: 新しい依存関係を追加して dependency graph を見る
