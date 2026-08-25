@@ -26,7 +26,7 @@ Dependabot alerts は、コードが安全でないパッケージに依存し�
 ### :keyboard: やること 2.2: Dependabot alerts を有効にする
 
 1. **Settings** タブを開きます。
-1. **Advanced Security** の設定を表示します。
+1. **Advanced Security**（アカウントによっては **Code security**）の設定を表示します。
 1. Dependabot alerts を **Enable** にします。
 1. **Dependabot がアラートを確認するまで 60 秒ほど待ちます。**
 1. **Security** タブを開きます。
