@@ -12,7 +12,7 @@ _Dependabot alerts の有効化・確認・作成、よくできました :spark
 
 ### :keyboard: やること 3.1: Dependabot security updates を有効にして動かす
 
-1. **Settings** タブを開き、**Advanced Security** を選びます。
+1. **Settings** タブを開き、**Advanced Security**（アカウントによっては **Code security**）を選びます。
 1. **Dependabot security updates** を有効にします。新しい pull request が現れるまで 30〜60 秒待つ必要があるかもしれません。
 1. リポジトリの **Pull requests** タブを開き、Dependabot が見つけたものを確認します。
 1. **axios** 依存関係にパッチを当てる新しい pull request を探します。
