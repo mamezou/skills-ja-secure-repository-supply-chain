@@ -43,4 +43,4 @@ security updates はアラートの解決を自動化してくれますが、単
 Dependabot version updates が次のように更新を確認するよう設定できました。
 
 - GitHub Actions の更新を月に 1 回確認し、古いものがあれば更新する pull request を作成する。
-- .NET パッケージの更新を週に 1 回確認し、古いものがあれば更新する pull request を作成する。既定では月曜日に実行されます。別の曜日に実行するには [schedule.day](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#scheduleday) を参照してください。
+- .NET パッケージの更新を週に 1 回確認し、古いものがあれば更新する pull request を作成する。既定では月曜日に実行されます。別の曜日に実行するには [schedule.day](https://docs.github.com/ja/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#scheduleday) を参照してください。
